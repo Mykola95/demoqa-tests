@@ -9,7 +9,7 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = "http://demoqa.com";
         Configuration.browserSize = "1920x1080";
     }
 }
