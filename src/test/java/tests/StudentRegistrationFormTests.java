@@ -17,7 +17,7 @@ public class StudentRegistrationFormTests extends TestBase {
                 .setBirthDate(day, month, year)
                 .typeSubject(subject)
                 .selectCheckBox(hobby)
-//                .selectPicture(path)
+                .selectPicture(path)
                 .typeAddress(address)
                 .selectState(state)
                 .selectCity(city)
@@ -32,7 +32,7 @@ public class StudentRegistrationFormTests extends TestBase {
                 .checkResultsValue("Date of Birth", day + " " + month + "," + year)
                 .checkResultsValue("Subjects", subject)
                 .checkResultsValue("Hobbies", hobby)
-//                .checkResultsValue("Picture", nameFile)
+                .checkResultsValue("Picture", nameFile)
                 .checkResultsValue("Address", address)
                 .checkResultsValue("State and City", state + " " + city);
     }
