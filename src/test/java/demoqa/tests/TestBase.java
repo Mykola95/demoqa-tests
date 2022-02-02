@@ -42,6 +42,11 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
         closeWebDriver();
+
+        Attach.attachAsText("Browser: ", Configuration.browser);
+        Attach.attachAsText("Version: ", Configuration.browserVersion);
+        Attach.attachAsText("Size ", Configuration.browserSize);
+        Attach.attachAsText("Remote Url: ", Configuration.remote);
     }
 
 }
