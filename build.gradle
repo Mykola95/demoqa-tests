@@ -66,3 +66,9 @@ task google_test(type: Test) {
         includeTags "google"
     }
 }
+
+task demo_test(type: Test) {
+    useJUnitPlatform{
+        includeTags "demoqa"
+    }
+}
