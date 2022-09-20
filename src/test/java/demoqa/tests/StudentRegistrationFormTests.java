@@ -1,5 +1,7 @@
 package demoqa.tests;
 
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static demoqa.testdata.TestData.*;
@@ -7,6 +9,7 @@ import static demoqa.testdata.TestData.*;
 public class StudentRegistrationFormTests extends TestBase {
 
     @Test
+    @Tag("demoqa")
     void fillFormTest() {
         registrationPage.openPage()
                 .typeFirstName(firstName)
@@ -35,5 +38,16 @@ public class StudentRegistrationFormTests extends TestBase {
                 .checkResultsValue("Picture", nameFile)
                 .checkResultsValue("Address", address)
                 .checkResultsValue("State and City", state + " " + city);
+    }
+
+    @Test
+    @Tag("google")
+    void open(){
+        Selenide.open("https://www.youtube.com");
+    }
+
+    @Test
+    void open1(){
+        Selenide.open("https://www.youtube.com");
     }
 }
