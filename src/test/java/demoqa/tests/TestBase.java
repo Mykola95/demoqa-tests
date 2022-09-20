@@ -17,6 +17,7 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+        DesiredCapabilities capabilities = new DesiredCapabilities();
 
         Configuration.baseUrl = "https://demoqa.com";
 
@@ -27,11 +28,13 @@ public class TestBase {
         String login = System.getProperty("login");
         String password = System.getProperty("password");
         String url = System.getProperty("url");
-        Configuration.remote = "https://" + login + ":" + password + "@" + url;
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+        if (System.getProperty("remote") != null) {
+            Configuration.remote = System.getProperty("remote", "\"https://\" + login + \":\" + password + \"@\" + url");
+            capabilities.setCapability("enableVNC", true);
+            capabilities.setCapability("enableVideo", true);
+        }
+
         Configuration.browserCapabilities = capabilities;
     }
 
