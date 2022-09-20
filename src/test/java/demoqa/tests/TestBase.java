@@ -30,7 +30,7 @@ public class TestBase {
         String url = System.getProperty("url");
 
         if (System.getProperty("remote") != null) {
-            Configuration.remote = System.getProperty("remote", "\"https://\" + login + \":\" + password + \"@\" + url");
+            Configuration.remote = "https://" + login + ":" + password + "@" + url;
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
         }
