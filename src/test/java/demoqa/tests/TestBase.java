@@ -20,22 +20,22 @@ public class TestBase {
 
         Configuration.baseUrl = "https://demoqa.com";
 
-//        String login = System.getProperty("login");
-//        String password = System.getProperty("password");
-//        String url = System.getProperty("url");
-//
-//        if (url != null) {
-//            Configuration.remote = "https://" + login + ":" + password + "@" + url;
-//
-//            DesiredCapabilities capabilities = new DesiredCapabilities();
-//            capabilities.setCapability("enableVNC", true);
-//            capabilities.setCapability("enableVideo", true);
-//            Configuration.browserCapabilities = capabilities;
-//
-//            Configuration.browser = System.getProperty("browser", "chrome");
-//            Configuration.browserVersion = System.getProperty("browserVersion", "91");
-//            Configuration.browserSize = System.getProperty("browserSize", "1280x1024");
-//        }
+        String login = System.getProperty("login");
+        String password = System.getProperty("password");
+        String url = System.getProperty("url");
+
+        if (url != null) {
+            Configuration.remote = "https://" + login + ":" + password + "@" + url;
+
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("enableVNC", true);
+            capabilities.setCapability("enableVideo", true);
+            Configuration.browserCapabilities = capabilities;
+
+            Configuration.browser = System.getProperty("browser", "chrome");
+            Configuration.browserVersion = System.getProperty("browserVersion", "91");
+            Configuration.browserSize = System.getProperty("browserSize", "1280x1024");
+        }
     }
 
     @AfterEach
