@@ -11,7 +11,7 @@ public class Property {
     }
 
     public static String url() {
-        return System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
+        return System.getProperty("url");
     }
 
     public static String browser() {
@@ -24,9 +24,5 @@ public class Property {
 
     public static String browserSize() {
         return System.getProperty("browserSize", "1920x1080");
-    }
-
-    public static String remoteUrl() {
-        return System.getProperty("remoteUrl", "");
     }
 }
