@@ -16,7 +16,7 @@ jobs:
           distribution: 'zulu'
           java-version: '8'
       # запускаем тесты
-      - run: gradle clean test -Dbrowser=firefox -DbrowserVersion=98 -DbrowserSize=1280x1024 -Dlogin=user1 -Dpassword=1234 -Durl=selenoid.autotests.cloud/wd/hub
+      - run: gradle clean test -Dbrowser=firefox -DbrowserVersion=100 -DbrowserSize=1280x1024 -Dlogin=user1 -Dpassword=1234 -Durl=selenoid.autotests.cloud/wd/hub
       # скачиваем историю тестов
       - uses: actions/checkout@v2
         if: always()

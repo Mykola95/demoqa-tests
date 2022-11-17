@@ -51,11 +51,8 @@ public class TestBase {
         Configuration.browser = browser();
         Configuration.browserVersion = browserVersion();
         Configuration.browserSize = browserSize();
-        String login = System.getProperty("login");
-        String password = System.getProperty("password");
-        String url = System.getProperty("url");
         if (!remoteUrl().equals("")) {
-            Configuration.remote = remoteUrl() + "https://" + login + ":" + password + "@" + url;
+            Configuration.remote = remoteUrl() + "https://" + login() + ":" + password() + "@" + url();
         }
     }
 
