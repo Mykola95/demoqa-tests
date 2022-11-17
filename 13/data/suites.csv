@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Nov 17 12:59:17 GMT 2022","Thu Nov 17 12:59:27 GMT 2022","9688","","demoqa.tests.StudentRegistrationFormTests","","demoqa.tests.StudentRegistrationFormTests","open","open()",""
+"passed","Thu Nov 17 12:59:27 GMT 2022","Thu Nov 17 12:59:35 GMT 2022","8048","","demoqa.tests.StudentRegistrationFormTests","","demoqa.tests.StudentRegistrationFormTests","open1","open1()",""
+"passed","Thu Nov 17 12:58:09 GMT 2022","Thu Nov 17 12:59:17 GMT 2022","67893","","demoqa.tests.StudentRegistrationFormTests","","demoqa.tests.StudentRegistrationFormTests","fillFormTest","fillFormTest()",""
