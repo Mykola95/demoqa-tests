@@ -3,12 +3,13 @@ package demoqa.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import demoqa.pages.RegistrationPage;
-import demoqa.properties.Property;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import static demoqa.properties.Property.*;
 
 public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
@@ -19,9 +20,9 @@ public class TestBase {
 
         Configuration.baseUrl = "https://demoqa.com";
 
-        String login = Property.login();
-        String password = Property.password();
-        String url = Property.url();
+        String login = login();
+        String password = password();
+        String url = url();
 
         if (url != null) {
             Configuration.remote = "https://" + login + ":" + password + "@" + url;
@@ -32,9 +33,9 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
-        Configuration.browser = Property.browser();
-        Configuration.browserVersion = Property.browserVersion();
-        Configuration.browserSize = Property.browserSize();
+        Configuration.browser = browser();
+        Configuration.browserVersion = browserVersion();
+        Configuration.browserSize = browserSize();
 
     }
 
