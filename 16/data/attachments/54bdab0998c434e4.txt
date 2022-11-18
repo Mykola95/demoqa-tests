@@ -1,0 +1,4 @@
+[2022-11-18T13:39:40+0000] [SEVERE] https://cdn.ad.plus/player/adplus.js 401:150 Uncaught TypeError: e(...).setup is not a function
+[2022-11-18T13:39:41+0000] [WARNING] https://cdn.ampproject.org/rtv/012211060024000/v0/amp-ad-exit-0.1.mjs 1 Unrecognized feature: 'attribution-reporting'.
+[2022-11-18T13:39:45+0000] [SEVERE] https://demoqa.com/automation-practice-form - Access to XMLHttpRequest at 'https://api.rlcdn.com/api/identity/envelope?pid=13781' from origin 'https://demoqa.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+[2022-11-18T13:39:45+0000] [SEVERE] https://api.rlcdn.com/api/identity/envelope?pid=13781 - Failed to load resource: net::ERR_FAILED
